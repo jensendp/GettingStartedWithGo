@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{.Blog.Title}}</title>
+  <meta name="description" content="A really great blog about Go">
+  <meta name="author" content="Derek Jensen">
+</head>
+<body>
+  <h1>{{.Blog.Header}} by {{.Blog.Author}}</h1>
+  <h3>Blog Posts</h3>
+  {{ range .Posts }}
+  <p>
+    <strong>{{.Title}}</strong> by {{.Author}}
+  </p>
+  <p>
+    {{.Body}}
+  </p>
+  {{ end }}
+</body>
+</html>
